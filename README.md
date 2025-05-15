@@ -1,7 +1,19 @@
 # Financio Frontend
 
 Financio is a modern personal finance management web application. This is the frontend built using [Vite](https://vitejs.dev/) and [React](https://react.dev/), designed to interface with a RESTful backend API.
+## 📚 Table of Contents
 
+- [🚀 Features](#-features)
+- [📦 Tech Stack](#-tech-stack)
+- [🔧 Setup & Development](#-setup--development)
+  - [1. Clone the repository](#1-clone-the-repository)
+  - [2. Install dependencies](#2-install-dependencies)
+  - [3. Configure environment variables](#3-configure-environment-variables)
+  - [4. Run the development server](#4-run-the-development-server)
+  - [5. Build for Production](#5-build-for-production)
+   - [6. Deployment](#6-deployment)
+- [📄 License](#license)
+  
 ## 🚀 Features
 
 - Responsive, user-friendly UI for managing personal finances
@@ -24,7 +36,7 @@ git clone https://github.com/your-username/financio-frontend.git
 cd financio-frontend
 ```
 
-### 2. Clone the repository
+### 2. Install dependencies
 ```bash
 npm install
 ```
@@ -45,12 +57,15 @@ VITE_BACKEND_URL=http://localhost:5000
 npm run dev
 ```
 
-### 5. 🛠 Build for Production
+### 5. Build for Production
 ```bash
 npm run build
 ```
 This will create an optimized production build in the dist/ folder.
 
-### 6. 🌐 Deployment
+### 6. Deployment
 You can deploy the production build to any static site hosting service (like Vercel, Netlify, or your custom server). Just ensure the VITE_BACKEND_URL 
 is set to the correct backend endpoint in your deployed environment.
+
+## License
+This project is open-source and available under the MIT License.
