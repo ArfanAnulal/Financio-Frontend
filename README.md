@@ -1,4 +1,56 @@
-The Personal Finance Management App project was a significant learning experience and a successful endeavor. The project delivered a functional web application that meets the requirements for managing personal finances, including tracking income and expenses, setting budgets, and achieving financial goals. I have gained valuable experience in full-stack development, UI/UX design, and project management. Future enhancements could include additional features such as advanced reporting, integration with banking APIs, improved budget and goal-setting tools, and enhanced security measures.
+# Financio Frontend
 
-Test the front end of my web app at:
-   -  https://financio-mu.vercel.app/
+Financio is a modern personal finance management web application. This is the frontend built using [Vite](https://vitejs.dev/) and [React](https://react.dev/), designed to interface with a RESTful backend API.
+
+## 🚀 Features
+
+- Responsive, user-friendly UI for managing personal finances
+- Authentication and secure API interaction
+- Real-time updates and clean data visualizations
+- Environment-based configuration
+
+## 📦 Tech Stack
+
+- **React** (with Vite)
+- **Axios** for HTTP requests
+- **React Router** for client-side routing
+
+## 🔧 Setup & Development
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/financio-frontend.git
+cd financio-frontend
+```
+
+### 2. Clone the repository
+```bash
+npm install
+```
+
+### 3. Configure environment variables
+Create a .env file 
+in the root of the project and add:
+```bash
+VITE_BACKEND_URL=http://localhost:5000
+```
+
+- During development, use your local backend URL.
+
+- In production, set VITE_BACKEND_URL to your deployed backend's URL.
+
+### 4. Run the development server
+```bash
+npm run dev
+```
+
+### 5. 🛠 Build for Production
+```bash
+npm run build
+```
+This will create an optimized production build in the dist/ folder.
+
+###6. 🌐 Deployment
+You can deploy the production build to any static site hosting service (like Vercel, Netlify, or your custom server). Just ensure the VITE_BACKEND_URL 
+is set to the correct backend endpoint in your deployed environment.
