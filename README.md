@@ -51,6 +51,6 @@ npm run build
 ```
 This will create an optimized production build in the dist/ folder.
 
-###6. 🌐 Deployment
+### 6. 🌐 Deployment
 You can deploy the production build to any static site hosting service (like Vercel, Netlify, or your custom server). Just ensure the VITE_BACKEND_URL 
 is set to the correct backend endpoint in your deployed environment.
