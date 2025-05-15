@@ -42,7 +42,7 @@ npm install
 ```
 
 ### 3. Configure environment variables
-Create a .env file 
+Create a `.env` file 
 in the root of the project and add:
 ```bash
 VITE_BACKEND_URL=http://localhost:5000
@@ -50,7 +50,7 @@ VITE_BACKEND_URL=http://localhost:5000
 
 - During development, use your local backend URL.
 
-- In production, set VITE_BACKEND_URL to your deployed backend's URL.
+- In production, set `VITE_BACKEND_URL` to your deployed backend's URL.
 
 ### 4. Run the development server
 ```bash
@@ -64,7 +64,7 @@ npm run build
 This will create an optimized production build in the dist/ folder.
 
 ### 6. Deployment
-You can deploy the production build to any static site hosting service (like Vercel, Netlify, or your custom server). Just ensure the VITE_BACKEND_URL 
+You can deploy the production build to any static site hosting service (like Vercel, Netlify, or your custom server). Just ensure the `VITE_BACKEND_URL` 
 is set to the correct backend endpoint in your deployed environment.
 
 ## License
