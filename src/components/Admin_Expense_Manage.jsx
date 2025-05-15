@@ -7,6 +7,7 @@ import UpdateIcon from '@mui/icons-material/Update';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 const Admin_Expense_Manage = () => {
+  const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
   const navigate = useNavigate();
 
   var [UserExp, setUserExp] = useState([]);
@@ -25,8 +26,8 @@ const Admin_Expense_Manage = () => {
   }
 
   //to view
-  useEffect(() => { 
-    axios.get("http://localhost:1880/admin_view_exp")
+  useEffect(() => {
+    axios.get(`${API_BASE_URL}/admin_view_exp`)
       .then((res) => {
         console.log(res)
         setUserExp(res.data)
@@ -39,7 +40,7 @@ const Admin_Expense_Manage = () => {
   //to delete
   const delValue = (id) => {
     console.log(id)
-    axios.delete("http://localhost:1880/admin_remove_exp/" + id)
+    axios.delete(`${API_BASE_URL}/admin_remove_exp/${id}`)
       .then((res) => {
         alert(res.data.message)
         window.location.reload()

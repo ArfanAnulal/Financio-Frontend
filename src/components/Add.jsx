@@ -9,6 +9,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import dayjs from 'dayjs';
 
 const Add = () => {
+  const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
   const navigate = useNavigate();
   const location = useLocation();
   console.log(location.state);
@@ -37,7 +38,7 @@ const Add = () => {
   const addHandler = () => {
     if(location.state !== null){
       inputs.Date = value;
-      axios.put("http://localhost:1880/editpfm/"+location.state.val._id,inputs)
+      axios.put(`${API_BASE_URL}/editpfm/${location.state.val._id}`,inputs)
       .then((res)=>{
         console.log(res)
         alert(res.data.message)
@@ -59,7 +60,7 @@ const Add = () => {
         inputs.Email = email;
         inputs.Date = value;
         console.log(inputs);
-        axios.post("http://localhost:1880/add_pfm", inputs)
+        axios.post(`${API_BASE_URL}/add_pfm`, inputs)
           .then((res) => {
             console.log(res);
             alert(res.data.message);
