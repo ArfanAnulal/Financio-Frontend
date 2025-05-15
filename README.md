@@ -1,6 +1,6 @@
 # Financio Frontend
 
-Financio is a modern personal finance management web application. This is the frontend built using [Vite](https://vitejs.dev/) and [React](https://react.dev/), designed to interface with a RESTful backend API.
+Financio is a modern personal finance management web application. This is the frontend built using [Vite](https://vitejs.dev/) and [React](https://react.dev/), designed to interface with a RESTful backend API. The backend of this project is available at [Backend Repo](https://github.com/ArfanAnulal/Financio-Backend)
 ## 📚 Table of Contents
 
 - [🚀 Features](#-features)
