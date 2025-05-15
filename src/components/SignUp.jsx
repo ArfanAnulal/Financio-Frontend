@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
+  const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
   const navigate = useNavigate();
 
   const isSmallScreen = useMediaQuery('(max-width:600px)');
@@ -32,7 +33,7 @@ const SignUp = () => {
     if (inputs.Password === inputs.CPassword) {
       const finalinputs = { Username: inputs.Username, Email: inputs.Email, Password: inputs.Password };
       console.log(finalinputs);
-      axios.post("http://localhost:1880/add_user", finalinputs)
+      axios.post(`${API_BASE_URL}/add_user`, finalinputs)
         .then((res) => {
           console.log(res);
           if (res.data.message === 'This email already exists, try again with a different email' || res.data.message === 'Please fill out all the fields' ) {

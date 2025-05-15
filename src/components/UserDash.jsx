@@ -9,6 +9,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import LogoutIcon from '@mui/icons-material/Logout';
 var email
 const UserDash = () => {
+  const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
   var navigate = useNavigate()
   
 
@@ -29,7 +30,7 @@ const UserDash = () => {
     try {
          email = localStorage.getItem('email')
         console.log("Hiiii machane  "+email)
-        axios.post("http://localhost:1880/get_userinfo",{email})
+        axios.post(`${API_BASE_URL}/get_userinfo`, { email })
             .then((res)=>{
                 console.log(res)
                 console.log('done')
@@ -46,7 +47,7 @@ const UserDash = () => {
     var [user_pfm,setUserPFM] = useState([])
 
     useEffect(()=>{
-        axios.get('http://localhost:1880/view_pfm')
+        axios.get(`${API_BASE_URL}/view_pfm`)
         .then((res)=>{
              console.log('Data obtained')
              setUserPFM(res.data)
@@ -62,7 +63,7 @@ const UserDash = () => {
 
     const delValue=(id)=>{
         console.log(id)
-        axios.delete("http://localhost:1880/remove_pfm/"+id)
+        axios.delete(`${API_BASE_URL}/remove_pfm/${id}`)
         .then((res)=>{
           alert(res.data.message)
           window.location.reload()

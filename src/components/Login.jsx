@@ -8,7 +8,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 
 const Login = () => {
-  
+  const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
   const navigate = useNavigate();
 
 
@@ -31,7 +31,7 @@ const Login = () => {
   };
 
   const loginHandler = () => {
-    axios.post("http://localhost:1880/login", inputs)
+    axios.post(`${API_BASE_URL}/login`, inputs)
       .then((res) => {
         console.log(res);
         setAlertContent(res.data.message);

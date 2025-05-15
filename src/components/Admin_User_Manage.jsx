@@ -8,13 +8,14 @@ import UpdateIcon from '@mui/icons-material/Update';
 
 
 const Admin_User_Manage = () => {
+  const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
   var [UserData,setUserData] = useState([]);
 
   const navigate = useNavigate();
   
   //to view
   useEffect (()=>{
-    axios.get("http://localhost:1880/admin_view")
+    axios.get(`${API_BASE_URL}/admin_view`)
     .then((res)=>{
        console.log(res)
        setUserData(res.data)
@@ -27,7 +28,7 @@ const Admin_User_Manage = () => {
     //to delete
     const delValue=(id)=>{
       console.log(id)
-      axios.delete("http://localhost:1880/admin_remove/"+id)
+      axios.delete(`${API_BASE_URL}/admin_remove/${id}`)
       .then((res)=>{
         alert(res.data.message)
         window.location.reload()

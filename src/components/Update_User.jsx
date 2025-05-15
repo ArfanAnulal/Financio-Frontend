@@ -7,6 +7,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const Update_User = () => {
+  const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
   const navigate = useNavigate();
   const location = useLocation();
   console.log(location.state);
@@ -32,7 +33,7 @@ const Update_User = () => {
   };
 
   const signupHandler = () => {
-    axios.put("http://localhost:1880/edituser/"+location.state.val._id,inputs)
+    axios.put(`${API_BASE_URL}/edituser/${location.state.val._id}`, inputs)
             .then((res)=>{
               console.log(res)
               alert(res.data.message)
